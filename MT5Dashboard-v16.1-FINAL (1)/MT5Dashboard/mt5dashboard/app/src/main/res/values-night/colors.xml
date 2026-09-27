@@ -1,0 +1,18 @@
+<resources>
+    <color name="colorPrimary">#12233F</color>
+    <color name="colorPrimaryDark">#050B14</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+
+    <color name="colorAccent">#26C6DA</color>
+
+    <color name="colorBuy">#0ECB81</color>
+    <color name="colorSell">#F6465D</color>
+
+    <color name="colorBackground">#0E1621</color>
+    <color name="colorSurface">#16202D</color>
+    <color name="colorOnSurface">#E8EAED</color>
+
+    <color name="colorTextPrimary">#E8EAED</color>
+    <color name="colorTextSecondary">#9AA5B1</color>
+    <color name="colorDivider">#26313F</color>
+</resources>

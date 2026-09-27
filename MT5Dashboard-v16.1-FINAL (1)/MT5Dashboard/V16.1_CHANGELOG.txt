@@ -1,0 +1,29 @@
+MT5 Dashboard v16.1
+====================
+
+Applied requested corrections for B-28 and B-26.
+
+1) B-28: Added AlarmListener.onTriggerDismissed(...).
+   - ScenarioEngine.dismiss(...) emits the distinct dismissed event.
+   - AlarmNotifier cancels the corresponding notification through onTriggerDismissed.
+   - Expire/replacement/close continue using onTriggerExpired.
+
+2) B-28: Dismiss now requires scenarioId, symbol, direction, and triggerId.
+   - The active trigger is fetched by Symbol+Direction.
+   - Dismiss proceeds only when the active trigger id matches the requested id.
+   - A stale UI callback cannot dismiss a newer replacement trigger.
+
+3) B-26: Trigger history now stores a structured immutable List<Signal> snapshot
+   instead of only a formatted combinationSummary string.
+   - UI builds the display summary from the snapshot.
+
+4) B-26: Trigger History retention is a persistent user setting.
+   - Added SettingsProvider and SharedPreferences key:
+     trigger_history_retention_hours
+   - Default: 24 hours.
+   - MainActivity reads/writes the setting through SettingsProvider.
+   - ScenarioEngineManager reads retention through SettingsProvider and no longer
+     owns a mutable runtime retention field or setter.
+
+No B-24 runtime state persistence was added.
+No D-07 weekend-expiration logic was changed in v16.1.

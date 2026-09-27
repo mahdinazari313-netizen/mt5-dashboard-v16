@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mt5dashboard">
+
+    <!-- برای Foreground Service سبک نگهدارنده وضعیت (بخش «حداکثر تلاش برای عدم توقف») -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+
+    <!-- برای نمایش نوتیفیکیشن دائمی در Android 13+ -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- برای درخواست معافیت از Battery Optimization از کاربر (منوی مدیریت مجوزها) -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <application
+        android:name=".MT5DashboardApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.MT5Dashboard"
+        android:supportsRtl="true">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.CreateScenarioActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- سرویس سبک نگهدارنده Process + نوتیفیکیشن دائمی وضعیت اجرا -->
+        <service
+            android:name=".service.MonitoringForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
+        <!-- سرویس اصلی دریافت اعلان‌های MetaTrader 5 -->
+        <service
+            android:name=".service.MT5NotificationListenerService"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <!-- دریافت‌کننده دکمه Silent روی نوتیفیکیشن آلارم -->
+        <receiver
+            android:name=".alarm.SilenceActionReceiver"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

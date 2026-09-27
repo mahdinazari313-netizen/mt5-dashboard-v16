@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">داشبورد سیگنال MT5</string>
+
+    <string name="nav_active_signals">سیگنال‌های فعال</string>
+    <string name="nav_scenarios">سناریوها</string>
+    <string name="nav_trigger_history">تاریخچه Trigger</string>
+
+    <string name="menu_settings">تنظیمات نمایش</string>
+    <string name="menu_permissions">مدیریت مجوزها</string>
+    <string name="menu_about">درباره برنامه</string>
+    <string name="menu_stop_monitoring">توقف مانیتورینگ</string>
+    <string name="menu_start_monitoring">شروع مانیتورینگ</string>
+    <string name="menu_trigger_history_retention">Trigger History Retention (ساعت)</string>
+
+    <string name="monitoring_notification_title">MT5 Monitor</string>
+    <string name="monitoring_notification_text_running">در حال اجرا — دریافت سیگنال فعال است</string>
+    <string name="monitoring_notification_text_stopped">متوقف شده</string>
+    <string name="monitoring_notification_channel_name">وضعیت مانیتورینگ MT5</string>
+    <string name="monitoring_notification_channel_desc">نمایش دائمی وضعیت فعال بودن دریافت سیگنال از MT5</string>
+
+    <string name="permission_notification_access_title">دسترسی به اعلان‌ها</string>
+    <string name="permission_notification_access_desc">برای دریافت سیگنال از MetaTrader 5، باید دسترسی «Notification Access» را برای این برنامه فعال کنید.</string>
+    <string name="permission_battery_title">معافیت از بهینه‌سازی باتری</string>
+    <string name="permission_battery_desc">برای اجرای پایدار در پس‌زمینه، توصیه می‌شود برنامه از بهینه‌سازی باتری معاف شود.</string>
+    <string name="permission_open_settings">باز کردن تنظیمات</string>
+    <string name="permission_post_notifications">مجوز نمایش اعلان</string>
+    <string name="permission_monitoring_service">وضعیت سرویس مانیتورینگ</string>
+    <string name="permission_request">درخواست</string>
+    <string name="permission_request_exemption">درخواست معافیت</string>
+    <string name="status_enabled">✅ فعال</string>
+    <string name="status_disabled">❌ غیرفعال</string>
+    <string name="status_not_required">➖ لازم نیست</string>
+    <string name="status_running">✅ در حال اجرا</string>
+    <string name="status_stopped">❌ متوقف</string>
+
+    <string name="about_version_label">نسخه</string>
+    <string name="about_description">این برنامه سیگنال‌های خام دریافتی از MetaTrader 5 را پردازش، اعتبارسنجی و بر اساس سناریوهای تعریف‌شده توسط شما ترکیب می‌کند تا آلارم مناسب صادر شود. این برنامه خودش تحلیل تکنیکال انجام نمی‌دهد.</string>
+
+    <string name="settings_display_duration_label">مدت نمایش سیگنال در صفحه اول (دقیقه)</string>
+    <string name="settings_save">ذخیره</string>
+
+    <!-- ساخت سناریو -->
+    <string name="create_scenario_title">ساخت سناریوی جدید</string>
+    <string name="scenario_name_hint">نام سناریو</string>
+    <string name="scenario_main_timeframe_label">Main Time Frame</string>
+    <string name="scenario_price_difference_label">Price Difference</string>
+    <string name="scenario_minimum_timeframe_sync_label">Minimum Timeframe Sync</string>
+    <string name="scenario_minimum_timeframe_count_label">حداقل تعداد تایم‌فریم هم‌زمان</string>
+    <string name="scenario_dual_timeframe_label">Dual in One Timeframe</string>
+    <string name="scenario_dual_requires_main_tf_error">برای Dual in One Timeframe باید Main Time Frame هم روشن باشد</string>
+    <string name="scenario_validity_multiplier_label">Signal Validity Multiplier</string>
+    <string name="scenario_repeat_interval_label">Signal Repeat Interval (دقیقه)</string>
+    <string name="scenario_save_button">ساخت سناریو</string>
+    <string name="scenario_name_required_error">لطفاً یک نام برای سناریو وارد کنید</string>
+
+    <!-- صفحه دوم -->
+    <string name="scenarios_empty_state">هنوز هیچ سناریویی نساخته‌اید. با دکمه + شروع کنید.</string>
+    <string name="scenario_close_button">حذف سناریو</string>
+    <string name="scenario_silence_button">Silent</string>
+    <string name="scenario_dismiss_button">Dismiss</string>
+    <string name="scenario_no_active_trigger">در حال حاضر Trigger فعالی ندارد</string>
+    <string name="scenario_silenced_label">خاموش‌شده</string>
+    <string name="scenario_close_confirm_title">حذف سناریو</string>
+    <string name="scenario_close_confirm_message">این سناریو و تمام اطلاعاتش برای همیشه حذف می‌شود. ادامه می‌دهید؟</string>
+
+    <!-- تاریخچه Trigger (B-26) -->
+    <string name="trigger_history_retention_description">مدت نگهداری Triggerها در تاریخچه؛ حداقل ۱ ساعت.</string>
+    <string name="empty_trigger_history">هیچ Trigger اخیری وجود ندارد</string>
+
+    <!-- آلارم -->
+    <string name="alarm_channel_name">آلارم سناریو</string>
+    <string name="alarm_channel_desc">اعلان زمانی که یک Trigger سناریو صادر می‌شود</string>
+    <string name="alarm_notification_title">آلارم سناریو: %1$s</string>
+    <string name="alarm_action_silence">Silent</string>
+</resources>
