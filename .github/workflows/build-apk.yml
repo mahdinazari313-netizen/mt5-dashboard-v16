@@ -29,11 +29,11 @@ jobs:
 
     - name: Build Debug APK
       run: gradle assembleDebug --no-daemon
-      working-directory: MT5Dashboard/mt5dashboard
+      working-directory: mt5dashboard
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: mt5-dashboard-v16-debug
-        path: MT5Dashboard/mt5dashboard/app/build/outputs/apk/debug/app-debug.apk
+        path: mt5dashboard/app/build/outputs/apk/debug/app-debug.apk
         if-no-files-found: error
